@@ -1,5 +1,4 @@
 import Button from "../../UI/Button";
-import ButtonLike from "../../UI/ButtonLike";
 import ButtonCart from "../../UI/ButtonCart";
 
 import { useState } from "react";
@@ -13,20 +12,12 @@ const Item = function ({ item, addToCart }) {
   const cart = JSON.parse(localStorage.getItem("cart"));
   useEffect(() => {
     setChecked(false);
-    cart.forEach((checkedItem) => {
+    cart?.forEach((checkedItem) => {
       if (checkedItem.id === item.id) setChecked(true);
     });
-  }, [cart]);
+  }, [cart, item.id]);
 
-  item = {
-    id: item.id,
-    category: item.category,
-    title: item.title,
-    price: item.price,
-    description: item.description,
-    image: item.image,
-    counter: 1,
-  };
+  item = { ...item, counter: 1 };
 
   const addToCartItem = function (cartItem, id) {
     addToCart(cartItem, id);
@@ -35,7 +26,7 @@ const Item = function ({ item, addToCart }) {
   return (
     <div className={styles.item}>
       <div className={styles.item__image}>
-        <img src={item.image} />
+        <img src={item.image} alt={item.id} />
       </div>
       <div className={styles.item__text}>
         <div className={styles.item__header}>

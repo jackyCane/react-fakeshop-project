@@ -11,7 +11,7 @@
   &__logo {
     order: 2;
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     align-items: center;
     &__link {
       height: 100%;
@@ -24,7 +24,7 @@
   }
   &__signInBtn {
     display: flex;
-    justify-content: start;
+    justify-content: flex-start;
     align-items: center;
     order: 1;
   }
@@ -56,7 +56,7 @@
 .burgerButton {
   display: flex;
   align-items: center;
-  justify-content: end;
+  justify-content: flex-end;
   display: none;
 }
 

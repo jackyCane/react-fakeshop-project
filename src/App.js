@@ -86,7 +86,7 @@ function App() {
   const localCart = localStorage.getItem("cart");
   useEffect(() => {
     if (localCart) setCart(JSON.parse(localCart));
-  }, []);
+  }, [localCart]);
 
   //
   const categorieLoader = function (choosenCategorie) {

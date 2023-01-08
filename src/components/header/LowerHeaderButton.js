@@ -10,8 +10,8 @@ const LowerHeaderButtons = function ({ burgerButton }) {
   const [cartLength, setCartLength] = useState(0);
   const cart = JSON.parse(localStorage.getItem("cart"));
   useEffect(() => {
-    setCartLength(cart.length);
-  });
+    setCartLength(cart?.length);
+  }, [cart?.length]);
   return (
     <div className={styles.lowerHeaderButtons}>
       <ButtonLike />

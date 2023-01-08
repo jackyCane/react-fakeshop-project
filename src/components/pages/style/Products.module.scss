@@ -6,4 +6,9 @@
     font-size: 25px;
     margin-bottom: 30px;
   }
+  &__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }

@@ -1,9 +1,13 @@
 import { useState } from "react";
 import { useEffect } from "react";
 import { useParams } from "react-router-dom";
+
 import Spinner from "../../UI/Spinner";
 import Item from "./Item";
 import Section from "../Section";
+
+import styles from "./style/ItemContainer.module.css";
+
 import { scrollUp } from "../../helper/helperFunctions";
 
 const ItemContainer = function ({ addToCart, cart }) {
@@ -23,11 +27,13 @@ const ItemContainer = function ({ addToCart, cart }) {
   }, []);
   return (
     <Section>
-      {item == undefined ? (
-        <Spinner />
-      ) : (
-        <Item item={item} cart={cart} addToCart={addToCart} />
-      )}
+      <div className={styles.itemContainer}>
+        {item == undefined ? (
+          <Spinner />
+        ) : (
+          <Item item={item} cart={cart} addToCart={addToCart} />
+        )}
+      </div>
     </Section>
   );
 };

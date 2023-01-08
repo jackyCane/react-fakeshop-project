@@ -1,0 +1,25 @@
+.upperHeader {
+  display: flex;
+  justify-content: space-between;
+  background: #000;
+  color: white;
+  padding: 10px 2vw;
+  &__btns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.btns {
+  &__btn {
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__stick {
+    position: relative;
+    top: -3px;
+  }
+}

@@ -1,0 +1,76 @@
+.popupWrapper {
+  background: #fff;
+  border-radius: 15px;
+  position: relative;
+  top: 100%;
+  transition: 0.5s;
+  &__active {
+    top: 0%;
+  }
+}
+.cancelButton {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  height: 50px;
+}
+.popup {
+  padding: 0 30px 30px 30px;
+  &__title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+  &__inputs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 15px;
+  }
+  &__btns {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__btn {
+    color: white;
+  }
+}
+.title {
+  &__text {
+    font-size: 25px;
+    margin-right: 10px;
+  }
+}
+.passwordBlock {
+  display: flex;
+  & input {
+    margin-bottom: 0;
+    margin-right: 10px;
+  }
+  &__btn {
+    border: none;
+    background: #fff;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    cursor: pointer;
+    width: 40px;
+  }
+  &__image {
+    width: 100%;
+    & img {
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .popup {
+    padding: 0 20px 20px 20px;
+  }
+  .cancelButton {
+    height: 35px;
+  }
+}

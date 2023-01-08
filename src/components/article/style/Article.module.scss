@@ -1,0 +1,37 @@
+.article {
+  flex: 0 0 21%;
+  margin: 0 2%;
+  margin-bottom: 30px;
+  color: black;
+  text-decoration: none;
+  &__image {
+    height: 300px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    overflow: hidden;
+  }
+  & img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    transition: 0.3s;
+    &:hover {
+      transform: scale(1.1);
+      transition: 0.3s;
+    }
+  }
+  &__dscr {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    height: 100px;
+  }
+  &__price {
+    font-size: 20px;
+  }
+}

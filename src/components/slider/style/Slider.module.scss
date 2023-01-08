@@ -1,0 +1,49 @@
+.slider {
+  position: relative;
+  &__slidesList {
+    overflow-x: hidden;
+    display: flex;
+    scroll-behavior: smooth;
+    align-items: center;
+    justify-content: space-between;
+    scroll-snap-type: x mandatory;
+    border-radius: 10px;
+    background: rgb(235, 235, 235);
+    padding-bottom: 8px;
+    &:hover {
+      overflow-x: scroll;
+      padding-bottom: 0;
+    }
+    &::-webkit-scrollbar {
+      height: 8px;
+    }
+    &::-webkit-scrollbar-thumb {
+      background: rgb(109, 109, 109);
+      border-radius: 10px;
+    }
+  }
+  &__btns {
+    display: flex;
+    position: absolute;
+    top: -10%;
+    right: 0;
+  }
+  &__btn {
+    background: rgb(235, 235, 235);
+    padding: 10px;
+    border-radius: 50%;
+    font-size: 18px;
+    margin-right: 10px;
+    transition: 0.5s;
+    &:hover {
+      background: rgb(191, 191, 191);
+      transition: 0.5s;
+    }
+    &:last-child {
+      margin-right: 0px;
+    }
+  }
+}
+.disabledButton {
+  font-size: 50px;
+}

@@ -1,0 +1,17 @@
+.searchButton {
+  font-size: 25px;
+  height: 30px;
+  width: 30px;
+  color: rgb(67, 67, 67);
+  border-radius: 50%;
+  transition: 0.5s;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2px;
+  &:hover {
+    background: rgb(202, 202, 202);
+    transition: 0.5s;
+  }
+}

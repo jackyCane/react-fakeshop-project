@@ -1,0 +1,10 @@
+.lowerHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  z-index: 1;
+  top: -2px;
+  background: #fff;
+  padding: 0px 2vw;
+}

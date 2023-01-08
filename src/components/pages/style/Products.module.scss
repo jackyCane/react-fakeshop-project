@@ -1,0 +1,9 @@
+.products {
+  &__title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    margin-bottom: 30px;
+  }
+}

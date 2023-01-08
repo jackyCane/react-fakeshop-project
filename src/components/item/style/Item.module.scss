@@ -1,0 +1,139 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+
+.item {
+  display: flex;
+  &__image {
+    flex: 1 1 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    & img {
+      width: 50%;
+    }
+  }
+  &__text {
+    flex: 1 1 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    padding: 3%;
+    background: rgb(235, 235, 235);
+  }
+  &__header {
+    margin-bottom: 5%;
+    width: 100%;
+  }
+  &__title {
+    font-size: 50px;
+    font-family: "Bebas Neue", cursive;
+    line-height: 50px;
+  }
+  &__category {
+    font-size: 18px;
+  }
+  &__dscr {
+    font-size: 18px;
+    margin-bottom: 5%;
+    text-align: justify;
+  }
+  &__price {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__options {
+    display: flex;
+  }
+  &__added {
+    overflow: hidden;
+    padding: 0 5px;
+  }
+}
+.price {
+  &__btn {
+    font-size: 20px;
+  }
+}
+.checked:hover {
+  color: #000;
+  display: flex;
+}
+.added {
+  transition: transform 0.5s;
+  transform: translate(0px, 20px);
+}
+.addedActive {
+  transition: transform 0.3s;
+  transform: translate(0px, 0px);
+}
+
+@media screen and (max-width: 1024px) {
+  .item {
+    &__image {
+      flex: 1 1 50%;
+      & img {
+        width: 70%;
+      }
+    }
+    &__title {
+      font-size: 40px;
+      line-height: 40px;
+    }
+    &__category {
+      font-size: 16px;
+    }
+    &__dscr {
+      font-size: 16px;
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  .item {
+    flex-direction: column;
+    &__image {
+      aspect-ratio: 2/1;
+      margin-bottom: 2%;
+      & img {
+        width: 50%;
+      }
+    }
+    &__header {
+      margin-bottom: 3%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    &__title {
+      font-size: 30px;
+      line-height: 30px;
+    }
+    &__category {
+      font-size: 14px;
+    }
+
+    &__dscr {
+      font-size: 16px;
+      margin-bottom: 3%;
+    }
+  }
+}
+@media screen and (max-width: 425px) {
+  .item {
+    &__text {
+      padding: 5%;
+    }
+    &__header {
+      flex-direction: column;
+    }
+    &__title {
+      font-size: 30px;
+    }
+    &__dscr {
+      display: none;
+      font-size: 14px;
+      margin-bottom: 3%;
+    }
+  }
+}

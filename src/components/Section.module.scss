@@ -1,0 +1,26 @@
+.section {
+  padding: 0px 2vw;
+  margin-bottom: 5%;
+  width: 100%;
+  &__title {
+    margin-bottom: 1%;
+    font-size: 24px;
+    width: 100%;
+    display: flex;
+    align-items: start;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .section {
+    &__title {
+      font-size: 22px;
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  .section {
+    &__title {
+      font-size: 18px;
+    }
+  }
+}

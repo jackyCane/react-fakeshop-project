@@ -1,0 +1,23 @@
+.footer {
+  &__link {
+    margin-right: 20px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  &__item {
+    text-decoration: none;
+    color: white;
+  }
+}
+@media screen and (max-width: 425px) {
+  .footer {
+    &__link {
+      margin-right: 0px;
+      margin-bottom: 5px;
+      &:last-child {
+        margin-bottom: 0px;
+      }
+    }
+  }
+}

@@ -1,0 +1,73 @@
+.dividedPart {
+  aspect-ratio: 1/0.75;
+  flex: 0 1 49.5%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  justify-content: end;
+
+  & > img {
+    position: absolute;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: 0.5s;
+  }
+  &:hover .blur {
+    transition: 0.5s;
+    background: rgba(255, 255, 255, 0.3);
+  }
+  &__dscr {
+    padding: 5%;
+  }
+  &__title {
+    font-size: 30px;
+    color: white;
+    margin-bottom: 2%;
+  }
+  &__button {
+    color: black;
+    background: white;
+  }
+}
+.selected:hover > img {
+  transition: 0.5s;
+  transform: scale(1.1);
+}
+.blur {
+  background-color: transparent;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transition: 0.5s;
+}
+
+@media screen and (max-width: 768px) {
+  .dividedPart {
+    aspect-ratio: 0.75/1;
+    &__title {
+      font-size: 25px;
+      margin-bottom: 5px;
+    }
+  }
+}
+@media screen and (max-width: 425px) {
+  .dividedPart {
+    flex: 0 1 100%;
+    aspect-ratio: 1/1;
+    margin-bottom: 10px;
+    justify-content: center;
+    align-items: center;
+    &__dscr {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: rgba(208, 208, 208, 0.499);
+      width: 100%;
+      padding: 1%;
+    }
+  }
+}

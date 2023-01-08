@@ -1,0 +1,18 @@
+.news {
+  overflow: hidden;
+  background: rgb(225, 225, 225);
+  padding: 10px 0;
+  margin-bottom: 30px;
+  &__list {
+    display: flex;
+    list-style: none;
+    width: 300vw;
+    transition: 1s;
+  }
+}
+@media screen and (max-width: 768px) {
+  .news {
+    margin-bottom: 15px;
+    padding: 5px 0;
+  }
+}
